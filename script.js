@@ -21,8 +21,8 @@ function switchTab(clickedTab){
         currentTab.classList.add("active");
 
         if(!searchSection.classList.contains("active")){
-            grantAccess.classList.remove("active");
             weatherDisplaySection.classList.remove("active");
+            grantAccess.classList.remove("active");
             searchSection.classList.add("active");
         }else{
             searchSection.classList.remove("active");
@@ -157,9 +157,9 @@ searchSection.addEventListener("submit", (e) => {
 });
 
 async function fetchSearchWeatherInfo(city) {
-    loadingSection.classList.add("active");
     weatherDisplaySection.classList.remove("active");
     apiErrorContainer.classList.remove("active");
+    loadingSection.classList.add("active");
     
     try {
     const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric`);
@@ -177,8 +177,6 @@ async function fetchSearchWeatherInfo(city) {
     apiErrorContainer.classList.add("active");
     apiErrorMessage.innerText = `${error?.message}`;
     apiErrorBtn.style.display = "block";
-    apiErrorBtn.addEventListener("click", () => {
-        fetchSearchWeatherInfo(city)
-    })
+    apiErrorBtn.addEventListener("click", () => fetchSearchWeatherInfo(city));
   }
 }
