@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Reetu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Todhri&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main id="wrapper">
+        <h1>Weather App</h1>
+
+        <!-- Location section -->
+        <section class="location-section">
+
+            <span class="weather-tab active">
+                Your Weather
+            </span>
+
+            <span class="weather-tab" data-searchWeather>
+                Search Weather
+            </span>
+        </section>
+
+        <!-- container -->
+        <div class="weather-container">
+            <!-- Grant access -->
+            <section class="sub-container grant-access active">
+
+                <img src="/assets/location.png" class="loaction" width="80" height="80" loading="lazy">
+
+                <p class="location-grant">
+                    Grant Location Access
+                </p>
+
+                <p class="location-allow">
+                    Allow Access To Get Weather Information
+                </p>
+
+                <button class="grant-access-btn">
+                    Grant Access
+                </button>
+
+            </section>
+
+            <!-- Loading -->
+            <section class="sub-container loading-section">
+
+                <img src="/assets/loading.gif" class="loading" width="80" height="80">
+
+                <p class="loading-para">
+                    Loading
+                </p>
+
+            </section>
+
+            <!-- Search -->
+            <form class="search-section">
+
+                <input type="text" placeholder="Search your city..." search-bar>
+
+                <button type="submit" loading="lazy">
+                    <img src="/assets/search.png" class="search" height="80" width="80" loading="lazy">
+                </button>
+
+            </form>
+
+            <!-- Weather display -->
+            <section class="sub-container weather-display-section">
+
+                <div class="city-header">
+                    <p class="city-name"></p>
+
+                    <img class="city-flag" crossorigin="anonymous">
+                </div>
+
+                <p class="city-weather"></p>
+
+                <img class="weather-img">
+
+                <p class="temperature"></p>
+
+                <section class="cards">
+
+                    <span class="card1 card">
+
+                        <img src="/assets/wind.png" class="windspeed-img">
+
+                        <p class="windspeed">
+                            Windspeed
+                        </p>
+
+                        <p class="city-windspeed"></p>
+
+                    </span>
+
+                    <span class="card2 card">
+
+                        <img src="/assets/humidity.png" class="humidity-img">
+
+                        <p class="humidity">
+                            Humidity
+                        </p>
+
+                        <p class="city-humidity"></p>
+
+                    </span>
+
+                    <span class="card3 card">
+
+                        <img src="/assets/cloud.png" class="cloud-img">
+
+                        <p class="cloud">
+                            Clouds
+                        </p>
+
+                        <p class="city-cloud"></p>
+
+                    </span>
+
+                </section>
+
+            </section>
+
+            <!-- handle api fetch error -->
+            <section class="sub-container api-error-container">
+
+                <img src="/assets/not-found.png" data-notfoundimg>
+
+                <p data-apierrortext></p>
+
+                <button class="btn" data-apierrorbtn>Retry</button>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2025 Reetu Gupta
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
