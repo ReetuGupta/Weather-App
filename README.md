@@ -17,7 +17,7 @@ A simple Weather App built with **HTML, CSS, and JavaScript** that fetches real-
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)  
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)  
-![OpenWeather API](https://openweathermap.org/api)  
+[OpenWeather API](https://openweathermap.org/api)  
 
 ## 🔗 Connect with Me
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://weather-app-reetugupta.netlify.app/)
